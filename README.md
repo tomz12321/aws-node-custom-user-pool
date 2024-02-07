@@ -10,6 +10,12 @@ This example demonstrates how to create an AWS Cognito custom user pool.
 [![serverless](http://public.serverless.com/badges/v3.svg)](http://www.serverless.com)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
+## To deploy
+```bash
+nvm install 18.15.0
+nvm use 18.15.0
+npx serverless deploy
+```
 ## Use-cases
 
 As of October 2017 AWS Cloud Formation does not directly support creating Cognito user pools with UsernameAttributes or VerificationMessageTemplate. The UsernameAttributes setting may not be changed after creation. In order to create a user pool with the UsernameAttributes set, a custom resource type must be used which calls a lambda that uses the AWS api to create the pool for you. When AWS fixes these issues this will become obsolete, however it still serves as an example of how to implement a custom resource type backed by a lambda.
