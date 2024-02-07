@@ -1,0 +1,18 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+
+secrets.json
+
+# env
+env.yml
+.env
+
+# package directories
+node_modules
+jspm_packages
+
+# Serverless directories
+.webpack
+.serverless
